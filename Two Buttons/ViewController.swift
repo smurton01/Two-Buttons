@@ -9,11 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var textLabel: UILabel!
-    @IBAction func setTextButtonTapped(_ sender: UIButton) {
-        
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
+    
+    @IBAction func setTextButtonTapped(_ sender: Any) {
+        label.text = textField.text
     }
-    @IBAction func clearTextButtonTapped(_ sender: UIButton) {
+    @IBAction func clearTextButtonTapped(_ sender: Any) {
+        textField.text = ""
+        label.text = ""
     }
     
     override func viewDidLoad() {
